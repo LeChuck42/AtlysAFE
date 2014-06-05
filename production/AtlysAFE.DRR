@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: AtlysAFE.PcbDoc   05.06.2014  20:50:18
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : AtlysAFE-RoundHoles.TXT
+ASCII SlotHoles File : AtlysAFE-SlotHoles.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        11.81mil (0.29997mm)     Round          702              68.87 Inch (1749.18 mm)
+T2        19.68mil (0.49987mm)     Slot           2                287.55 Inch (7303.85 mm)
+T3        21.65mil (0.54991mm)     Slot           2                287.43 Inch (7300.65 mm)
+T4        25.59mil (0.64999mm)     Round          68               5.02 Inch (127.49 mm)
+T5        39.37mil (1mm)           Round          16               1.50 Inch (38.10 mm)
+T6        43.31mil (1.10007mm)     Round          14               7.46 Inch (189.55 mm)
+T7        47.24mil (1.1999mm)      Round          58               16.48 Inch (418.48 mm)
+T8        55mil (1.397mm)          Round          2                0.20 Inch (5.08 mm)
+T9        70.87mil (1.8001mm)      Round          2         NPTH   1.65 Inch (41.90 mm)
+T10       125.98mil (3.19989mm)    Round          4         NPTH   9.29 Inch (236.00 mm)
+---------------------------------------------------------------------------
+Totals                                            870              685.44 Inch (17410.27 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
