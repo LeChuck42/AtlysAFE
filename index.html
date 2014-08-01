@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>AtlysAFE by LeChuck42</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/LeChuck42/AtlysAFE">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/LeChuck42/AtlysAFE/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/LeChuck42/AtlysAFE/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>AtlysAFE</h1>
+          <p>Analog Frontent for the Digilent Atlys Development Board</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/LeChuck42">LeChuck42</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p>The goal of this project is an analog frontend for the <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,836&amp;Prod=ATLYS">Digilent Atlys</a> FPGA Development Board.
+The board consists of a XILINX Spartan 6 FPGA and several peripherals. Other expansion modules
+can be connected via the VHDCI connector.</p>
+
+<p>The analog frontend will use this expansion port to connect two high speed ADCs and two high speed
+DACs to the FPGA. My plan it to use this board as a base for a <a href="http://en.wikipedia.org/wiki/Software-defined_radio">Software Defined Radio</a>.</p>
+
+<h2>
+<a name="layout" class="anchor" href="#layout"><span class="octicon octicon-link"></span></a>Layout</h2>
+
+<p>For most of the ICs free samples are available and the footprints are designed in a way that allows the board to be hand-soldered (using QFN with long pads and no BGA).</p>
+
+<p>I chose a 6 layer layout because the impedance controlled traces need a small distance to their reference plane. In small quantities it seems to be cheaper to use 6 layers instead of defining a low prepreg thickness for a 4 layer design.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
