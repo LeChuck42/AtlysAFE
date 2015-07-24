@@ -1,0 +1,300 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Unit main_tb(TB_ARCHITECTURE) created by an old version of the compiler found.
+# ELBREAD: Error: Library 'work' has incompatible format. Recompile all library units.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# Design Explorer: Shortcut to "C:\FPGA\AtlysAFE\sim\func_sim\func_sim.aws" design added.
+acom -O3 -work work -2002  $dsn/../../hdl/spi_register.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\hdl\spi_register.vhd
+# Compile Entity "spi_register"
+# Compile Architecture "rtl" of Entity "spi_register"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -work work -2002  $dsn/../../coregen/tx_mux.vhd $dsn/../../coregen/pll_mux.vhd $dsn/../../coregen/rx_mux.vhd $dsn/../../coregen/pll_main.vhd $dsn/../../hdl/spi_register.vhd $dsn/../../hdl/main.vhd $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\coregen\tx_mux.vhd
+# Compile Entity "tx_mux"
+# Compile Architecture "Structure" of Entity "tx_mux"
+# Compile Configuration "Structure_CON"
+# File: C:\FPGA\AtlysAFE\coregen\pll_mux.vhd
+# Compile Entity "pll_mux"
+# Compile Architecture "Structure" of Entity "pll_mux"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\pll_mux.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\coregen\rx_mux.vhd
+# Compile Entity "rx_mux"
+# Compile Architecture "Structure" of Entity "rx_mux"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\rx_mux.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\coregen\pll_main.vhd
+# Compile Entity "pll_main"
+# Compile Architecture "Structure" of Entity "pll_main"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\pll_main.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\hdl\spi_register.vhd
+# Compile Entity "spi_register"
+# Compile Architecture "rtl" of Entity "spi_register"
+# File: C:\FPGA\AtlysAFE\hdl\main.vhd
+# Compile Entity "main"
+# Compile Architecture "rtl" of Entity "main"
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 3 Warnings  Analysis time :  0.2 [s]
+acom -O3 -work work -2002  $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Error: COMP96_0015: TestBench/main_TB.vhd : (105, 20): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (106, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (106, 19): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (107, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (107, 19): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (108, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (108, 19): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (109, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (109, 16): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (110, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (110, 17): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (111, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (111, 17): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (112, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (112, 15): ':' expected.
+# Error: COMP96_0018: TestBench/main_TB.vhd : (114, 2): Identifier expected.
+# Error: COMP96_0015: TestBench/main_TB.vhd : (224, 63): ')' expected.
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile failure 17 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -work work -2002  $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Error: COMP96_0015: TestBench/main_TB.vhd : (224, 63): ')' expected.
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -work work -2002  $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Error: COMP96_0078: TestBench/main_TB.vhd : (219, 18): Unknown identifier "spi_cs_oe".
+# Error: COMP96_0133: TestBench/main_TB.vhd : (219, 18): Cannot find object declaration.
+# Error: COMP96_0077: TestBench/main_TB.vhd : (219, 18): Undefined type of expression. Expected type 'STD_ULOGIC'.
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile failure 3 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -work work -2002  $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -work work -2002  $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 -L ovi_machxo2 -PL pmi_work +access +r +m+main_tb main_tb TB_ARCHITECTURE
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7324 kB (elbread=1024 elab2=6137 kernel=162 sdf=0)
+# KERNEL: ASDB file was created in location C:\FPGA\AtlysAFE\sim\func_sim\src\wave.asdb
+#  13:25, Freitag, 24. Juli 2015
+#  Simulation has been initialized
+#  Selected Top-Level: main_tb (TB_ARCHITECTURE)
+# add wave -noreg {/main_tb/UUT/spi_cs_fpga}
+# add wave -noreg {/main_tb/UUT/spi_miso_fpga}
+# add wave -noreg {/main_tb/UUT/spi_reg}
+# add wave -noreg {/main_tb/UUT/spi_cs_adc}
+# add wave -noreg {/main_tb/UUT/spi_cs_dac}
+# add wave -noreg {/main_tb/UUT/spi_cs_clk}
+# add wave -noreg {/main_tb/UUT/spi_clk}
+# add wave -noreg {/main_tb/UUT/spi_mosi}
+# add wave -noreg {/main_tb/UUT/spi_miso}
+# add wave -noreg {/main_tb/UUT/spi_oe}
+# add wave -noreg {/main_tb/UUT/mux_synced}
+# add wave -noreg {/main_tb/UUT/sync_pattern}
+# add wave -noreg {/main_tb/UUT/rx_mux_out}
+# add wave -noreg {/main_tb/UUT/rx_mux_q}
+# add wave -noreg {/main_tb/UUT/rx_mux_alignwd}
+# add wave -noreg {/main_tb/UUT/rx_mux_clk_s}
+# add wave -noreg {/main_tb/UUT/rx_mux_init}
+# add wave -noreg {/main_tb/UUT/rx_mux_rx_ready}
+# add wave -noreg {/main_tb/UUT/rx_mux_sclk}
+# add wave -noreg {/main_tb/UUT/rx_mux_datain}
+# add wave -noreg {/main_tb/UUT/rx_mux_delay}
+# add wave -noreg {/main_tb/UUT/tx_mux_d}
+# add wave -noreg {/main_tb/UUT/tx_mux_reg}
+# add wave -noreg {/main_tb/UUT/tx_mux_clk_s}
+# add wave -noreg {/main_tb/UUT/tx_mux_clkop}
+# add wave -noreg {/main_tb/UUT/tx_mux_clkos}
+# add wave -noreg {/main_tb/UUT/tx_mux_clkout}
+# add wave -noreg {/main_tb/UUT/tx_mux_lock_chk}
+# add wave -noreg {/main_tb/UUT/tx_mux_sclk}
+# add wave -noreg {/main_tb/UUT/tx_mux_tx_ready}
+# add wave -noreg {/main_tb/UUT/tx_mux_dout}
+# add wave -noreg {/main_tb/UUT/mux_reset}
+# add wave -noreg {/main_tb/UUT/reset}
+# add wave -noreg {/main_tb/UUT/reset_buf}
+# add wave -noreg {/main_tb/UUT/reset_async}
+# add wave -noreg {/main_tb/UUT/sync_delay}
+# add wave -noreg {/main_tb/UUT/clk_fpga_int}
+# add wave -noreg {/main_tb/UUT/sync_mon_valid}
+# add wave -noreg {/main_tb/UUT/sync_mon_expect}
+# add wave -noreg {/main_tb/UUT/sync_mon_out}
+# add wave -noreg {/main_tb/UUT/CLK_FPGA}
+# add wave -noreg {/main_tb/UUT/CLK_REFSEL}
+# add wave -noreg {/main_tb/UUT/CLK_PDN}
+# add wave -noreg {/main_tb/UUT/CLK_SYNC}
+# add wave -noreg {/main_tb/UUT/CLK_SPI_LE}
+# add wave -noreg {/main_tb/UUT/CLK_SPI_CLK}
+# add wave -noreg {/main_tb/UUT/CLK_SPI_MOSI}
+# add wave -noreg {/main_tb/UUT/CLK_SPI_MISO}
+# add wave -noreg {/main_tb/UUT/CLKIN_SEL0}
+# add wave -noreg {/main_tb/UUT/CLKIN_SEL1}
+# add wave -noreg {/main_tb/UUT/CLKOUT_TYPE0}
+# add wave -noreg {/main_tb/UUT/CLKOUT_TYPE1}
+# add wave -noreg {/main_tb/UUT/MUX_CLK}
+# add wave -noreg {/main_tb/UUT/MUX1}
+# add wave -noreg {/main_tb/UUT/MUX2}
+# add wave -noreg {/main_tb/UUT/MUX3}
+# add wave -noreg {/main_tb/UUT/ENAB_3V3_LDO}
+# add wave -noreg {/main_tb/UUT/ENAB_DAC_LDO}
+# add wave -noreg {/main_tb/UUT/FPGA_PGOOD}
+# add wave -noreg {/main_tb/UUT/PDN_IN1}
+# add wave -noreg {/main_tb/UUT/PDN_IN2}
+# add wave -noreg {/main_tb/UUT/ADC_PDNA}
+# add wave -noreg {/main_tb/UUT/ADC_PDNB}
+# add wave -noreg {/main_tb/UUT/ADC_RESET}
+# add wave -noreg {/main_tb/UUT/ADC_SPI_CS}
+# add wave -noreg {/main_tb/UUT/ADC_SPI_SDATA}
+# add wave -noreg {/main_tb/UUT/ADC_SPI_CLK}
+# add wave -noreg {/main_tb/UUT/DAC_TXEN}
+# add wave -noreg {/main_tb/UUT/DAC_ALARM}
+# add wave -noreg {/main_tb/UUT/DAC_SPI_CS}
+# add wave -noreg {/main_tb/UUT/DAC_SPI_SDIO}
+# add wave -noreg {/main_tb/UUT/DAC_SPI_CLK}
+# add wave -noreg {/main_tb/UUT/SIO_RX}
+# add wave -noreg {/main_tb/UUT/SIO_TX}
+# add wave -noreg {/main_tb/UUT/SIO_RTSn}
+# add wave -noreg {/main_tb/UUT/SIO_CTSn}
+# add wave -noreg {/main_tb/UUT/SIO_DTRn}
+# add wave -noreg {/main_tb/UUT/SIO_DSRn}
+# add wave -noreg {/main_tb/UUT/SIO_DCDn}
+# add wave -noreg {/main_tb/UUT/LED}
+# add wave -noreg {/main_tb/UUT/GPIO}
+# 81 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/FPGA/AtlysAFE/sim/func_sim/src/wave.asdb'.
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/shift_reg}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/latch}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/spi_cs}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/spi_clk}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/spi_mosi}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/spi_miso}
+# add wave -noreg {/main_tb/UUT/spi_reg_inst/reg_out}
+# 7 signal(s) traced.
+run 15 us
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rx_mux_inst/udel_dataini0,  Process: line__6582.
+# KERNEL: stopped at time: 15 us
+# KERNEL: stopped at time: 115 us
+endsim
+#  Simulation has been stopped
+acom -O3 -work work -2002  $dsn/../../coregen/tx_mux.vhd $dsn/../../coregen/pll_mux.vhd $dsn/../../coregen/rx_mux.vhd $dsn/../../coregen/pll_main.vhd $dsn/../../hdl/spi_register.vhd $dsn/../../hdl/main.vhd $dsn/src/TestBench/main_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\coregen\tx_mux.vhd
+# Compile Entity "tx_mux"
+# Compile Architecture "Structure" of Entity "tx_mux"
+# Compile Configuration "Structure_CON"
+# File: C:\FPGA\AtlysAFE\coregen\pll_mux.vhd
+# Compile Entity "pll_mux"
+# Compile Architecture "Structure" of Entity "pll_mux"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\pll_mux.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\coregen\rx_mux.vhd
+# Compile Entity "rx_mux"
+# Compile Architecture "Structure" of Entity "rx_mux"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\rx_mux.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\coregen\pll_main.vhd
+# Compile Entity "pll_main"
+# Compile Architecture "Structure" of Entity "pll_main"
+# Compile Configuration "Structure_CON"
+# Warning: COMP96_0994: Multiple configuration "Structure_CON" found in "C:\FPGA\AtlysAFE\coregen\pll_main.vhd", "C:\FPGA\AtlysAFE\coregen\tx_mux.vhd".
+# File: C:\FPGA\AtlysAFE\hdl\spi_register.vhd
+# Compile Entity "spi_register"
+# Compile Architecture "rtl" of Entity "spi_register"
+# Error: COMP96_0078: ../../../hdl/spi_register.vhd : (39, 5): Unknown identifier "buffer_reg".
+# Error: COMP96_0133: ../../../hdl/spi_register.vhd : (39, 5): Cannot find object declaration.
+# File: C:\FPGA\AtlysAFE\hdl\main.vhd
+# Compile Entity "main"
+# Compile Architecture "rtl" of Entity "main"
+# File: C:\FPGA\AtlysAFE\sim\func_sim\src\TestBench\main_TB.vhd
+# Compile Entity "main_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "main_tb"
+# Compile Configuration "TESTBENCH_FOR_main"
+# Compile failure 2 Errors 3 Warnings  Analysis time :  0.1 [s]
+acom -O3 -work work -2002  $dsn/../../hdl/spi_register.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:\FPGA\AtlysAFE\hdl\spi_register.vhd
+# Compile Entity "spi_register"
+# Compile Architecture "rtl" of Entity "spi_register"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+asim -O5 -L ovi_machxo2 -PL pmi_work +access +r +m+main_tb main_tb TB_ARCHITECTURE
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7324 kB (elbread=1024 elab2=6137 kernel=162 sdf=0)
+# KERNEL: ASDB file was created in location C:\FPGA\AtlysAFE\sim\func_sim\src\wave.asdb
+#  13:35, Freitag, 24. Juli 2015
+#  Simulation has been initialized
+#  Selected Top-Level: main_tb (TB_ARCHITECTURE)
+# Waveform file 'untitled.awc' connected to 'C:/FPGA/AtlysAFE/sim/func_sim/src/wave.asdb'.
+run 100 us
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /main_tb/UUT/rx_mux_inst/udel_dataini0,  Process: line__6582.
+# KERNEL: stopped at time: 100 us

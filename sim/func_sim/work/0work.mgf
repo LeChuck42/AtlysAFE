@@ -1,0 +1,143 @@
+V 000036 11 1171 1437735734820 main
+E main VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK_FPGA _in STD_LOGIC
+P CLK_REFSEL _out STD_LOGIC
+P CLK_PDN _out STD_LOGIC
+P CLK_SYNC _out STD_LOGIC
+P CLK_SPI_LE _out STD_LOGIC
+P CLK_SPI_CLK _out STD_LOGIC
+P CLK_SPI_MOSI _out STD_LOGIC
+P CLK_SPI_MISO _in STD_LOGIC
+P CLKIN_SEL0 _out STD_LOGIC
+P CLKIN_SEL1 _out STD_LOGIC
+P CLKOUT_TYPE0 _out STD_LOGIC
+P CLKOUT_TYPE1 _out STD_LOGIC
+P MUX_CLK _in STD_LOGIC
+P MUX1 _in STD_LOGIC
+P MUX2 _in STD_LOGIC
+P MUX3 _out STD_LOGIC
+P ENAB_3V3_LDO _out STD_LOGIC
+P ENAB_DAC_LDO _out STD_LOGIC
+P FPGA_PGOOD _in STD_LOGIC
+P PDN_IN1 _out STD_LOGIC
+P PDN_IN2 _out STD_LOGIC
+P ADC_PDNA _out STD_LOGIC
+P ADC_PDNB _out STD_LOGIC
+P ADC_RESET _out STD_LOGIC
+P ADC_SPI_CS _out STD_LOGIC
+P ADC_SPI_SDATA _inout STD_LOGIC
+P ADC_SPI_CLK _out STD_LOGIC
+P DAC_TXEN _out STD_LOGIC
+P DAC_ALARM _in STD_LOGIC
+P DAC_SPI_CS _out STD_LOGIC
+P DAC_SPI_SDIO _inout STD_LOGIC
+P DAC_SPI_CLK _out STD_LOGIC
+P SIO_RX _in STD_LOGIC
+P SIO_TX _out STD_LOGIC
+P SIO_RTSn _in STD_LOGIC
+P SIO_CTSn _out STD_LOGIC
+P SIO_DTRn _in STD_LOGIC
+P SIO_DSRn _out STD_LOGIC
+P SIO_DCDn _out STD_LOGIC
+P LED _out STD_LOGIC_VECTOR[3:0]
+P GPIO _inout STD_LOGIC_VECTOR[13:0]
+X main
+V 000037 11 30 1437735734859 main_tb
+E main_tb VHDL
+PL 0
+X main_tb
+V 000038 11 174 1412281258862 mux_pll
+E mux_pll VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLKI _in STD_LOGIC
+P CLKOP _out STD_LOGIC
+P CLKOS _out STD_LOGIC
+P CLKOS2 _out STD_LOGIC
+P LOCK _out STD_LOGIC
+X mux_pll
+V 000039 11 129 1437735734784 pll_main
+E pll_main VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLKI _in STD_LOGIC
+P CLKOP _out STD_LOGIC
+P LOCK _out STD_LOGIC
+X pll_main
+V 000038 11 174 1437735734729 pll_mux
+E pll_mux VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLKI _in STD_LOGIC
+P CLKOP _out STD_LOGIC
+P CLKOS _out STD_LOGIC
+P CLKOS2 _out STD_LOGIC
+P LOCK _out STD_LOGIC
+X pll_mux
+V 000037 11 314 1437735734758 rx_mux
+E rx_mux VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P alignwd _in STD_LOGIC
+P clk _in STD_LOGIC
+P clk_s _in STD_LOGIC
+P del _in STD_LOGIC_VECTOR[4:0]
+P init _in STD_LOGIC
+P reset _in STD_LOGIC
+P rx_ready _out STD_LOGIC
+P sclk _out STD_LOGIC
+P datain _in STD_LOGIC_VECTOR[0:0]
+P q _out STD_LOGIC_VECTOR[7:0]
+X rx_mux
+V 000038 11 417 1412267664520 spi_mux
+E spi_mux VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+PL 0
+G TARGETS NATURAL = 3
+P spi_cs _in STD_LOGIC
+P spi_clk _in STD_LOGIC
+P spi_mosi _in STD_LOGIC
+P spi_miso _out STD_LOGIC
+P spi_oe _in STD_LOGIC
+P spi_mux_cs _out STD_LOGIC_VECTOR[TARGETS-1:0]
+P spi_mux_clk _out STD_LOGIC_VECTOR[TARGETS-1:0]
+P spi_mux_mosi _out STD_LOGIC_VECTOR[TARGETS-1:0]
+P spi_mux_miso _in STD_LOGIC_VECTOR[TARGETS-1:0]
+X spi_mux
+V 000043 11 270 1437737677418 spi_register
+E spi_register VHDL
+L STD;IEEE;
+U std.standard;ieee.std_logic_1164;
+PL 0
+G BITS NATURAL = 16
+P reset _in STD_LOGIC
+P spi_cs _in STD_LOGIC
+P spi_clk _in STD_LOGIC
+P spi_mosi _in STD_LOGIC
+P spi_miso _out STD_LOGIC
+P reg_out _out STD_LOGIC_VECTOR[BITS-1:0]
+X spi_register
+V 000037 11 314 1437735734695 tx_mux
+E tx_mux VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P clk_s _in STD_LOGIC
+P clkop _in STD_LOGIC
+P clkos _in STD_LOGIC
+P clkout _out STD_LOGIC
+P lock_chk _in STD_LOGIC
+P reset _in STD_LOGIC
+P sclk _out STD_LOGIC
+P tx_ready _out STD_LOGIC
+P dataout _in STD_LOGIC_VECTOR[7:0]
+P dout _out STD_LOGIC_VECTOR[0:0]
+X tx_mux

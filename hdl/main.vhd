@@ -4,96 +4,112 @@ use ieee.numeric_std.all;
 
 entity main is
 	port (
-		CLK_FPGA:		in  std_logic;
+		CLK_FPGA:       in  std_logic;
 		
 		-- CLOCK SYNTH
-		CLK_REFSEL:		out std_logic;
-		CLK_PDN:		out std_logic;
-		CLK_SYNC:		out std_logic;
+		CLK_REFSEL:     out std_logic;
+		CLK_PDN:        out std_logic;
+		CLK_SYNC:       out std_logic;
 		
-		CLK_SPI_LE:		out std_logic;
-		CLK_SPI_CLK:	out std_logic;
-		CLK_SPI_MOSI:	out std_logic;
-		CLK_SPI_MISO:	in  std_logic;
+		CLK_SPI_LE:     out std_logic;
+		CLK_SPI_CLK:    out std_logic;
+		CLK_SPI_MOSI:   out std_logic;
+		CLK_SPI_MISO:   in  std_logic;
 		
 		-- CLOCK MUX
-		CLKIN_SEL0:		out std_logic;
-		CLKIN_SEL1:		out std_logic;
-		CLKOUT_TYPE0:	out std_logic;
-		CLKOUT_TYPE1:	out std_logic;
+		CLKIN_SEL0:     out std_logic;
+		CLKIN_SEL1:     out std_logic;
+		CLKOUT_TYPE0:   out std_logic;
+		CLKOUT_TYPE1:   out std_logic;
 		
 		-- MUX INTERFACE
-		MUX_CLK:		in  std_logic;
-		MUX1:			in  std_logic;
-		MUX2:			in  std_logic;
-		MUX3:			out std_logic;
+		MUX_CLK:        in  std_logic;
+		MUX1:           in  std_logic;
+		MUX2:           in  std_logic;
+		MUX3:           out std_logic;
 		
 		-- LDO
-		ENAB_3V3_LDO:	out std_logic;
-		ENAB_DAC_LDO:	out std_logic;
-		FPGA_PGOOD:		in  std_logic;
+		ENAB_3V3_LDO:   out std_logic;
+		ENAB_DAC_LDO:   out std_logic;
+		FPGA_PGOOD:     in  std_logic;
 		
 		-- ADC
-		PDN_IN1:		out std_logic;
-		PDN_IN2:		out std_logic;
+		PDN_IN1:        out std_logic;
+		PDN_IN2:        out std_logic;
 		
-		ADC_PDNA:		out std_logic;
-		ADC_PDNB:		out std_logic;
-		ADC_RESET:		out std_logic;
+		ADC_PDNA:       out std_logic;
+		ADC_PDNB:       out std_logic;
+		ADC_RESET:      out std_logic;
 		
-		ADC_SPI_CS:		out std_logic;
-		ADC_SPI_SDATA:	inout std_logic;
-		ADC_SPI_CLK:	out std_logic;
+		ADC_SPI_CS:     out std_logic;
+		ADC_SPI_SDATA:  inout std_logic;
+		ADC_SPI_CLK:    out std_logic;
 		
 		-- DAC
-		DAC_TXEN:		out std_logic;
-		DAC_ALARM:		in  std_logic;
+		DAC_TXEN:       out std_logic;
+		DAC_ALARM:      in  std_logic;
 		
-		DAC_SPI_CS:		out std_logic;
-		DAC_SPI_SDIO:	inout std_logic;
-		DAC_SPI_CLK:	out std_logic;
+		DAC_SPI_CS:     out std_logic;
+		DAC_SPI_SDIO:   inout std_logic;
+		DAC_SPI_CLK:    out std_logic;
 		
 		-- USB SERIAL I/O
-		SIO_RX:			in  std_logic;
-		SIO_TX:			out std_logic;
-		SIO_RTSn:		in  std_logic;
-		SIO_CTSn:		out std_logic;
-		SIO_DTRn:		in  std_logic;
-		SIO_DSRn:		out std_logic;
-		SIO_DCDn:		out std_logic;
+		SIO_RX:         in  std_logic;
+		SIO_TX:         out std_logic;
+		SIO_RTSn:       in  std_logic;
+		SIO_CTSn:       out std_logic;
+		SIO_DTRn:       in  std_logic;
+		SIO_DSRn:       out std_logic;
+		SIO_DCDn:       out std_logic;
 		
 		-- OTHER
-		LED:			out std_logic_vector(3 downto 0);
-		GPIO:			inout std_logic_vector(13 downto 0));
+		LED:            out std_logic_vector(3 downto 0);
+		GPIO:           inout std_logic_vector(13 downto 0));
 end entity main;
 
 architecture rtl of main is
 
 component pll_mux
-    port (CLKI: in  std_logic; CLKOP: out  std_logic; 
+	port (CLKI: in  std_logic; CLKOP: out  std_logic; 
 	CLKOS: out  std_logic; CLKOS2: out std_logic;
 	LOCK: out  std_logic);
 end component;
 
 component rx_mux
-    port (alignwd: in  std_logic; clk: in  std_logic; 
-        clk_s: in  std_logic; del: in  std_logic_vector(4 downto 0); 
-        init: in  std_logic; reset: in  std_logic; 
-        rx_ready: out  std_logic; sclk: out  std_logic; 
-        datain: in  std_logic_vector(0 downto 0); 
-        q: out  std_logic_vector(7 downto 0));
+	port (alignwd: in  std_logic; clk: in  std_logic; 
+		clk_s: in  std_logic; del: in  std_logic_vector(4 downto 0); 
+		init: in  std_logic; reset: in  std_logic; 
+		rx_ready: out  std_logic; sclk: out  std_logic; 
+		datain: in  std_logic_vector(0 downto 0); 
+		q: out  std_logic_vector(7 downto 0));
 end component;
 
 component tx_mux
-    port (clk_s: in  std_logic; clkop: in  std_logic; 
-        clkos: in  std_logic; clkout: out  std_logic; 
-        lock_chk: in  std_logic; reset: in  std_logic; 
-        sclk: out  std_logic; tx_ready: out  std_logic; 
-        dataout: in  std_logic_vector(7 downto 0); 
-        dout: out  std_logic_vector(0 downto 0));
+	port (clk_s: in  std_logic; clkop: in  std_logic; 
+		clkos: in  std_logic; clkout: out  std_logic; 
+		lock_chk: in  std_logic; reset: in  std_logic; 
+		sclk: out  std_logic; tx_ready: out  std_logic; 
+		dataout: in  std_logic_vector(7 downto 0); 
+		dout: out  std_logic_vector(0 downto 0));
+end component;
+
+component spi_register
+	generic (
+		BITS:   natural := 16);
+	
+	port (
+		reset:      in std_logic;
+		spi_cs:     in std_logic;
+		spi_clk:    in std_logic;
+		spi_mosi:   in std_logic;
+		spi_miso:   out std_logic;
+		
+		reg_out:    out std_logic_vector(BITS-1 downto 0));
 end component;
 
 signal spi_cs_fpga: std_logic;
+signal spi_miso_fpga: std_logic;
+signal spi_reg: std_logic_vector(15 downto 0);
 signal spi_cs_adc: std_logic;
 signal spi_cs_dac: std_logic;
 signal spi_cs_clk: std_logic;
@@ -134,7 +150,7 @@ signal clk_fpga_int: std_logic;
 signal sync_mon_valid, sync_mon_expect, sync_mon_out: std_logic;
 begin
 	--pll_main_inst : pll_main
-	--	port map (CLKI=>CLK_FPGA, CLKOP=>clk, LOCK=>pll_lock);
+	--  port map (CLKI=>CLK_FPGA, CLKOP=>clk, LOCK=>pll_lock);
 
 	rx_mux_datain(0) <= MUX2;
 	MUX3 <= tx_mux_dout(0);
@@ -155,8 +171,20 @@ begin
 		rx_ready=>rx_mux_rx_ready, sclk=>rx_mux_sclk, datain(0 downto 0)=>rx_mux_datain, q(7 downto 0)=>rx_mux_q);
 
 	tx_mux_inst: tx_mux
-    port map (clk_s=>tx_mux_clk_s, clkop=>tx_mux_clkop, clkos=>tx_mux_clkos, clkout=>tx_mux_clkout, lock_chk=>tx_mux_lock_chk, 
-        reset=>mux_reset, sclk=>tx_mux_sclk, tx_ready=>tx_mux_tx_ready, dataout(7 downto 0)=>tx_mux_d, dout(0 downto 0)=>tx_mux_dout);
+	port map (clk_s=>tx_mux_clk_s, clkop=>tx_mux_clkop, clkos=>tx_mux_clkos, clkout=>tx_mux_clkout, lock_chk=>tx_mux_lock_chk, 
+		reset=>mux_reset, sclk=>tx_mux_sclk, tx_ready=>tx_mux_tx_ready, dataout(7 downto 0)=>tx_mux_d, dout(0 downto 0)=>tx_mux_dout);
+	
+	spi_reg_inst: spi_register
+		generic map ( BITS => 16)
+		port map(
+			reset => mux_reset,
+			spi_cs => spi_cs_fpga,
+			spi_clk => spi_clk,
+			spi_mosi => spi_mosi,
+			spi_miso => spi_miso_fpga,
+			reg_out => spi_reg);
+	
+	spi_miso <= spi_miso_fpga when spi_cs_fpga = '0' else 'Z';
 	
 	reset_async <= not FPGA_PGOOD;
 	
@@ -244,20 +272,20 @@ begin
 	CLK_SPI_MOSI <= spi_mosi when spi_cs_clk = '0' else '0';
 	spi_miso <= CLK_SPI_MISO when spi_cs_clk = '0' else 'Z';
 	
-	CLKIN_SEL0 <= '0';
-	CLKIN_SEL1 <= '0';
-	CLKOUT_TYPE0 <= '1';
-	CLKOUT_TYPE1 <= '0';
+	CLKIN_SEL0 <= spi_reg(4);
+	CLKIN_SEL1 <= spi_reg(5);
+	CLKOUT_TYPE0 <= spi_reg(6);
+	CLKOUT_TYPE1 <= spi_reg(7);
 	
 	ENAB_3V3_LDO <= '1';
 	ENAB_DAC_LDO <= '1';
 	
-	PDN_IN1 <= '0';
-	PDN_IN2 <= '0';
+	PDN_IN1 <= spi_reg(0);
+	PDN_IN2 <= spi_reg(1);
 	
-	ADC_PDNA <= '0';
-	ADC_PDNB <= '0';
-	ADC_RESET <= '1';
+	ADC_PDNA <= spi_reg(2);
+	ADC_PDNB <= spi_reg(3);
+	ADC_RESET <= '1' when mux_synced = '0' else '0';
 	
 	ADC_SPI_CS <= spi_cs_adc;
 	ADC_SPI_SDATA <= spi_mosi when spi_cs_adc = '0' and spi_oe = '0' else 'Z';
@@ -277,9 +305,9 @@ begin
 	SIO_DCDn <= 'Z';
 	GPIO <= rx_mux_out(6 downto 0) & rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & spi_miso & tx_mux_lock_chk;
 	LED(0) <= mux_synced;
-	LED(1) <= rx_mux_out(4);
-	LED(2) <= rx_mux_out(5);
-	LED(3) <= rx_mux_out(6);
+	LED(1) <= spi_reg(13);
+	LED(2) <= spi_reg(14);
+	LED(3) <= spi_reg(15);
 end architecture rtl;
 		
 		

@@ -1,0 +1,77 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=work
+
+[Library]
+func_sim=.\func_sim\func_sim.lib
+work=.\work\work.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+fileopenfolder=C:\FPGA\AtlysAFE\hdl
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=pmi_work
+LibNames=ovi_machxo2
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+func_sim=.
+work=.
+
+[LocalVerilogDirs]
+Count=0
+
+[DefineMacro]
+Global=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=main_tb|TB_ARCHITECTURE|0
+ShowHide=ShowTopLevel
+Selected=
+
+[Files.Data]
+.\..\..\coregen\tx_mux.vhd=VHDL Source Code
+.\..\..\coregen\pll_mux.vhd=VHDL Source Code
+.\..\..\coregen\rx_mux.vhd=VHDL Source Code
+.\..\..\coregen\pll_main.vhd=VHDL Source Code
+.\..\..\hdl\main.vhd=VHDL Source Code
+.\..\..\hdl\spi_register.vhd=VHDL Source Code
+.\src\TestBench\main_TB.vhd=VHDL Test Bench
+.\src\TestBench\main_TB_runtest.do=Macro
+
+[Groups]
+TestBench=1
+
+[Files]
+/..\..\..\coregen\tx_mux.vhd=-1
+/..\..\..\coregen\pll_mux.vhd=-1
+/..\..\..\coregen\rx_mux.vhd=-1
+/..\..\..\coregen\pll_main.vhd=-1
+/..\..\..\hdl\spi_register.vhd=-1
+/..\..\..\hdl\main.vhd=-1
+TestBench/main_TB.vhd=-1
+TestBench/main_TB_runtest.do=-1
+

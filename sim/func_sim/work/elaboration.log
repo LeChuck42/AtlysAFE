@@ -1,0 +1,60 @@
+Active-HDL 10.1.3088.5434  2015-07-24 13:35:03
+
+Elaboration top modules:
+Architecture                  TB_ARCHITECTURE(main_tb)
+
+
+--------------------------------------------------------------------------------------------------
+Entity       | Architecture    | Library | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------
+main_tb      | TB_ARCHITECTURE | work    |      | 10.1.3088.5434  (Windows) | -O3
+main         | rtl             | work    |      | 10.1.3088.5434  (Windows) | -O3
+pll_mux      | structure       | work    |      | 10.1.3088.5434  (Windows) | -O3
+rx_mux       | structure       | work    |      | 10.1.3088.5434  (Windows) | -O3
+tx_mux       | structure       | work    |      | 10.1.3088.5434  (Windows) | -O3
+spi_register | rtl             | work    |      | 10.1.3088.5434  (Windows) | -O3
+vlo          | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+ehxpllj      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+rom16x1a     | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+fd1p3bx      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+fd1p3dx      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+iddrx4b      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+clkdivc      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+eclksynca    | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+vhi          | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+delayd       | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+ib           | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+ob           | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+oddrx4b      | v               | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+VHDL Package                   | Library | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------
+standard                       | std     |      |                           | <unavailable>
+TEXTIO                         | std     |      | 10.1.3088.5434  (Windows) |  -2008
+std_logic_1164                 | ieee    |      | 10.1.3088.5434  (Windows) |  -2008
+NUMERIC_STD                    | ieee    |      | 10.1.3088.5434  (Windows) |  -2008
+std_logic_arith                | ieee    |      | 10.1.3088.5434  (Windows) | <unavailable>
+components                     | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+VITAL_Timing                   | ieee    |      | 10.1.3088.5434  (Windows) | <unavailable>
+VITAL_Primitives               | ieee    |      | 10.1.3088.5434  (Windows) | <unavailable>
+STD_LOGIC_UNSIGNED             | ieee    |      | 10.1.3088.5434  (Windows) | <unavailable>
+mem2                           | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+global                         | machxo2 |      | 10.1.3088.5434  (Windows) | -vendor lattice
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Library                        | Comment
+--------------------------------------------------------------------------------------------------
+ieee                           | Standard IEEE packages library
+machxo2                        | LATTICE Diamond 3.3, MACHXO2 VHDL LIBRARY
+std                            | Standard VHDL library
+work                           | None
+--------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 -L ovi_machxo2 -PL pmi_work +access +r +m+main_tb main_tb TB_ARCHITECTURE
+
+
+The performance of simulation is reduced. Version DE

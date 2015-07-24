@@ -1,0 +1,7 @@
+i<>.\..\..\coregen\tx_mux.vhd
+i<>.\..\..\coregen\rx_mux.vhd
+i<>.\..\..\coregen\pll_main.vhd
+i<>.\..\..\hdl\main.vhd
+i<>.\src\TestBench\main_TB.vhd
+i<>.\..\..\coregen\pll_mux.vhd
+i<>.\..\..\hdl\spi_register.vhd
