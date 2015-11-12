@@ -1,0 +1,3 @@
+[submodule "hdl"]
+	path = hdl
+	url = https://github.com/LeChuck42/AtlysAFE_HDL.git
